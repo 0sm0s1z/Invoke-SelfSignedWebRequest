@@ -56,7 +56,7 @@ function Invoke-SelfSignedWebRequest
 		$newWebRequest = "Invoke-WebRequest $url $cmdstr"
 		IEX $newWebRequest
 		
-		#Remove Cert & Clear Validation Calback
+		#Remove Cert & Clear Validation Callback
 		Get-ChildItem -Path "cert:\CurrentUser\My" -DnsName $fname | Remove-Item -force -confirm:0
 		[System.Net.ServicePointManager]::ServerCertificateValidationCallback = $null
 	}
