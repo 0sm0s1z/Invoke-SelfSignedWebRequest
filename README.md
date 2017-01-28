@@ -6,9 +6,11 @@ This repo exists as a quick and dirty arsenal of methods and scripts to subvert 
 My intent is to add on new methods as the come to mind. Pull requests welcome!
 
 ##Methods:
-*Invoke-SelfSignedWebRequest - Loads the target URI's SSL certificate into the local certificate store and wraps Invoke-WebRequest. Removes certificate upon completion of insecure WebRequest invocation. Aliased to wget-ss
-*Disable-CertificateValidation - Disables SSL certificate validation through the System.Net.ServicePointManager endpoint by manually configuring the ServerCertificateValidationCallback to return $true. Allows (New-Object System.Net.WebClient).DownloadFile() to connect to self-signed SSL domains.
-*Disable-NetSSLValidation - Configures internal .NET settings to disable SSL certificate validation via useUnsafeHeaderParsing
+* Invoke-SelfSignedWebRequest - Loads the target URI's SSL certificate into the local certificate store and wraps Invoke-WebRequest. Removes certificate upon completion of insecure WebRequest invocation. Aliased to wget-ss
+
+* Disable-CertificateValidation - Disables SSL certificate validation through the System.Net.ServicePointManager endpoint by manually configuring the ServerCertificateValidationCallback to return $true. Allows (New-Object System.Net.WebClient).DownloadFile() to connect to self-signed SSL domains.
+
+* Disable-NetSSLValidation - Configures internal .NET settings to disable SSL certificate validation via useUnsafeHeaderParsing
 
 
 Author: Matthew Toussain (@0sm0s1z)
